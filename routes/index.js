@@ -9,5 +9,6 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/products/profile/:id', productController.renderProfile)
+router.get('/products/edit/:id', productController.renderEditForm)
 
 module.exports = router;
