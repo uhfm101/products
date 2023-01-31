@@ -3,8 +3,8 @@ mixin productForm(product, categories, saveUrl, cancelUrl)
     div.from-container
         form(action=saveUrl method='post')
             div.form-input
-                label(for='product_name') Product Name
-                input(type='text' id='product_name' value=product.product_name)
+                label(for="product_name") Product Name
+                input(type="text" id="product_name" name = "product_name" value=product.product_name)
 
             div.form-input
                 label(for="category") Category
@@ -14,7 +14,7 @@ mixin productForm(product, categories, saveUrl, cancelUrl)
 
             div.form-input
                 label(for="description") Description
-                select(id= "description" name="description" rows=10 cols=80) #{product.description}
+                textarea(id= "description" name="description" rows=10 cols=80) #{product.description}
 
             div.form-buttons
                 a.button(href=cancelUrl) Cancel

@@ -4,6 +4,6 @@ block content
     h1= product.product_name
     div Rating:5
     div
-        a(href='#') Edit
+        a(href=`/products/edit/${product.id}`) Edit
         a(href='#') Delete
     p= product.description
