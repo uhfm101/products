@@ -5,12 +5,19 @@ const productController = require('../controllers/productController.js')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.redirect('/products');
 });
 
-router.get('/products/profile/:id', productController.renderProfile)
-router.get('/products/edit/:id', productController.renderEditForm)
+router.get('/products', productController.viewProducts)
 
+router.get('/products/profile/:id', productController.renderProfile)
+
+router.get('/products/edit/:id', productController.renderEditForm)
 router.post('/products/edit/:id', productController.updateProduct)
+
+router.get('/products/add', productController.renderAddForm)
+router.post('/products/add', productController.addProduct)
+
+router.get('/products/delete/:id', productController.deleteProduct)
 
 module.exports = router;

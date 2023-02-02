@@ -1,5 +1,20 @@
 extends layout
 
 block content
-    include mixins/productForm
-    +productForm(product, categories, `/products/edit/${product.id}`, `/products/profile/${product.id}`)
+    div.products-container
+        a(href = '/products/add') Add Project
+        table
+            thead
+                th Product Name
+                th Rating
+                th Category
+                th
+            tbody
+            each product in products
+                tr
+                    td= product.product_name
+                    td 5
+                    td= product.category
+                    td
+                        a(href= `/products/profile/${product.id}`) View Product
+
