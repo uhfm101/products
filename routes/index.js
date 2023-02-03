@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const productController = require('../controllers/productController.js')
+const reviewController = require('../controllers/reviewController.js')
 
 
 /* GET home page. */
@@ -19,5 +20,8 @@ router.get('/products/add', productController.renderAddForm)
 router.post('/products/add', productController.addProduct)
 
 router.get('/products/delete/:id', productController.deleteProduct)
+
+router.get('/products/:productId/review/add', reviewController.renderAddReviewForm)
+router.post('/products/:productId/review/add', reviewController.addReview)
 
 module.exports = router;
