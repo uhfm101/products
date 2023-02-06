@@ -12,9 +12,9 @@ mixin reviewForm(review, saveUrl, cancelUrl)
 
             div.form-input
                 label(for='rating') Rating
-                select(id='rating' name='string')
-                    each rating in [1,2,3,4,5]
-                        option(value=rating selected = (rating===review.rating)) #{rating}
+                select(id='rating' name='rating')
+                    each rating in [1, 2, 3, 4, 5]
+                        option(value=rating selected= (rating===review.rating)) #{rating}
 
             div.form-input
                 label(for="description") Description

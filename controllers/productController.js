@@ -61,3 +61,4 @@ module.exports.deleteProduct = async function(req, res){
     })
     res.redirect('/products')
 }
+

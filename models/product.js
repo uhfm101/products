@@ -20,7 +20,16 @@ module.exports = (sequelize, DataTypes) => {
   Product.init({
     product_name: DataTypes.STRING,
     category: DataTypes.STRING,
-    description: DataTypes.STRING
+    description: DataTypes.STRING,
+    rating:{
+      type:DataTypes.VIRTUAL,
+      get(){
+        const reviewCount = this.review.length;
+        if (!reviewCount){
+          return 0;
+        }
+      }
+    }
   }, {
     sequelize,
     modelName: 'Product',
