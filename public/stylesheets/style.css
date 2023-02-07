@@ -1,8 +1,200 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #ddd
 }
 
 a {
   color: #00B7FF;
+  text-decoration: none;
+}
+
+.container{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto
+}
+
+.content{
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  padding: 20px
+}
+
+.button{
+  display: block;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #6B7280;
+  color: #374151;
+  box-shadow: none;
+  text-decoration: none;
+  border-radius: 6px;
+  width: fit-content;
+  margin-right: 16px
+}
+
+.button.primary{
+  background: #164E63;
+  color: white;
+  border: none;
+}
+
+.button.danger{
+  background: #B91C1C;
+  color: white;
+  border: none
+}
+
+.products-header-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.products-header{
+  font-size: 20px;
+  color: #111827;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.table-container{
+  border-radius: 6px;
+  marin-top: 16px;
+  overflow: hidden;
+  border: 1px solid #D1D5DB
+}
+
+table {
+  background: white;
+  border-radius: 8px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td, th{
+  padding: 8px 16px;
+  text-align: left;
+}
+
+th{
+  background: #F9FAFB;
+  border: none;
+  color: #6B7280;
+  text-transform: uppercase;
+}
+
+td{
+  padding: 16px 32px;
+  border-top: 1px solid #D1D5DB;
+}
+
+td:last-child{
+  text-align: right;
+}
+
+.product-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-actions{
+  display: flex;
+}
+
+.product-actions .button{
+  margin-right: 16px;
+}
+
+.reviews{
+  margin-top: 64px;
+}
+
+.reviews-header{
+  font-size: 18px;
+  color: #1F2937
+}
+
+.product-name{
+  font-size: 20px;
+  color: #111827;
+}
+
+.product-description{
+  width: 80ch
+}
+
+.review-panel{
+  margin: 32px 0;
+  width: 600px
+}
+
+.review-panel-header{
+  display: flex;
+  align-items: baseline;
+}
+
+.rating-row{
+  display: flex;
+  align-items: center;
+}
+
+.customer-name{
+  font-weight: bold;
+  margin-right: 16px;
+  color: #111827;
+  margin-bottom: 4px;
+}
+
+.subject{
+  margin-right: 16px;
+  color: #4B5563;
+  margin-bottom: 16px;
+}
+
+.review-content{
+  color: #111827;
+}
+
+.review-actions{
+  margin-left: auto;
+}
+
+.reviews-actions a{
+  margin-right: 16px;
+}
+
+label{
+  color: #374151;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.form-input{
+  margin-bottom: 16px;
+}
+
+.form-input input, .form-input textarea, .form-input select{
+  padding: 8px 12px;
+  border-radius: 6px;
+  box-shadow: none;
+  border: 1px solid #9CA3AF;
+  background: white;
+}
+
+.form-input input:focus, .form-input textarea:focus,
+.form-input textarea:focus{
+  border: 1px solid #A5F3FC;
+  box-shadow: 0 0 3px 2px #22D3EE;
+}
+
+.form-buttons{
+  display: flex;
 }

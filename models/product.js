@@ -28,6 +28,11 @@ module.exports = (sequelize, DataTypes) => {
         if (!reviewCount){
           return 0;
         }
+        let total = 0;
+        for (let i=0; i<reviewCount; i++){
+          total+= this.reviews[i].rating
+        }
+        return total/reviewCount;
       }
     }
   }, {
